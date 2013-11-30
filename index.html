@@ -18,12 +18,12 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/fallenclient/testflight-alfred-workflow">View on GitHub</a>
 
-          <h1 id="project_title">Testflight-alfred-workflow</h1>
+          <h1 id="project_title">Testflight Alfred Workflow</h1>
           <h2 id="project_tagline">A workflow for uploading builds to TestFlight from Alfred</h2>
 
             <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/fallenclient/testflight-alfred-workflow/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/fallenclient/testflight-alfred-workflow/tarball/master">Download this project as a tar.gz file</a>
+              <a class="zip_download_link" href="src/TestFlight v1.1.alfredworkflow">Download this project Workflow file</a>
+              <a class="tar_download_link" href="https://github.com/fallenclient/testflight-alfred-workflow/zipball/master">Download this project Workflow as a .zip file</a>
             </section>
         </header>
     </div>
@@ -39,8 +39,14 @@ With your ipa file and dSym zip file (optional) selected use the hotkey CTRL+SHI
 <p>The workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload will switch from Upload Waiting… to the install url of the build or will notify on complete if you hit return/switch focus.</p>
 
 <h3>Notes</h3>
-</p>Once you have been through the workflow once using the keyword tfupload will start a new upload with previously entered options and the previously selected files.
+<p class="notes">Once you have been through the workflow once using the keyword tfupload will start a new upload with previously entered options and the previously selected files.
 You can also hit any keyword in the chain (tfpreflightnotes, tfdistribution, tfnotify, tfreplace) to start the workflow at that point using any previous options. e.g. tfdistribution will use the same selected files and notes as entered previously but will allow you to set distribution, notify and replace before uploading.</p>
+      </section>
+      <section id="change_log" class="inner">
+        <h4>Change Log</h4>
+        <p>Version 1.1<br />
+          Added Copy to Clipboard<br />
+          Hitting return on tfupload continues execution</p>
       </section>
     </div>
 

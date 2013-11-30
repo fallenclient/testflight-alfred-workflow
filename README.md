@@ -9,7 +9,7 @@ Getting Started
 ===============
 Get started by adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken. With your ipa file and dSym zip file (optional) selected use the hotkey CTRL+SHIFT+B to start the workflow.
 
-The workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload will switch from Upload Waiting… to the install url of the build or will notify on complete if you hit return/switch focus.
+The workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload once return is hit will upload your file(s) in the background and will notify you on success or failure. A successfull upload will put the build link on your clipboard to paste.
 
 Notes
 =====

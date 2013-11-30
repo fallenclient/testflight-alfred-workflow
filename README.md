@@ -15,6 +15,10 @@ Notes
 =====
 **Once you have been through the workflow once using the keyword tfupload will start a new upload with previously entered options and the previously selected files. You can also hit any keyword in the chain (tfpreflightnotes, tfdistribution, tfnotify, tfreplace) to start the workflow at that point using any previous options. e.g. tfdistribution will use the same selected files and notes as entered previously but will allow you to set distribution, notify and replace before uploading.**
 
+Credits
+=======
+jdfwarrior - Awesome PHP Workflow For Alfred - http://dferg.us/
+
 Change Log
 ----------
 Version 1.1

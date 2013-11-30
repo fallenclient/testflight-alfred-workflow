@@ -1,8 +1,12 @@
 <?php
+/**
+* Pre Flight Notify
+* @author Dave Fisher <david.fisher@thevirtualforge.com>
+*/
 require_once('workflows.php');
 $w = new Workflows('davefisher.tf');
 $q = $argv[1];
-// Testing appears but need to sort out strlen
+
 $w->result(
 	'',
 	"True",

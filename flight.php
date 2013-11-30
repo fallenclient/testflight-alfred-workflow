@@ -1,6 +1,10 @@
 <?php
-// CURLOPT_POST = true
-// CURLOPT_POSTFIELDS = http_build_query($data);
+/**
+* Flight
+* Constructs request to Test Flight API
+* @author Dave Fisher <david.fisher@thevirtualforge.com>
+* @version 1.1
+*/
 require_once('workflows.php');
 $w = new Workflows('davefisher.tf');
 
@@ -19,7 +23,7 @@ if (($api_token === null or strLen($api_token) < 1) or ($team_token === null or 
 {
 	$w->result(
 	'',
-	'Fail',
+	'Error: Missing API Token or Team Token',
 	"Error",
 	'You must supply api_token and team_token.',
 	'icon.png',
@@ -33,7 +37,7 @@ if ($file_ipa === null or strLen($file_ipa) < 1)
 {
 	$w->result(
 	'',
-	'Fail',
+	'Error: IPA File Required!',
 	"Error",
 	'You must supply a valid IPA file.',
 	'icon.png',
@@ -47,7 +51,7 @@ if ($note === null or strLen($note) < 1)
 {
 	$w->result(
 	'',
-	'Fail',
+	'Error: Build Note is Required!',
 	"Error",
 	'You must supply a build note.',
 	'icon.png',
@@ -56,7 +60,7 @@ if ($note === null or strLen($note) < 1)
 	echo $w->toxml();
 	return;
 }
-
+// CURL POST ARGS
 $post = array(
 	"file" => "@".$file_ipa,
 	"api_token" => $api_token,
@@ -76,18 +80,18 @@ if ($dist_list != null or strLen($dist_list))
 
 $post["notify"] = filter_var($notify, FILTER_VALIDATE_BOOLEAN);
 $post["replace"] = filter_var($replace, FILTER_VALIDATE_BOOLEAN);
-
+// CURL OPTIONS
 $options = array(
 	CURLOPT_POST => true,
 	CURLOPT_POSTFIELDS => $post
 	);
-
+// REQUEST - HANDLE RESPONSE
 $result = $w->request('http://testflightapp.com/api/builds.xml', $options);
 if ($result == "You must supply api_token, team_token, the file and notes (missing notes)")
 {
 	$w->result(
 	'',
-	'Fail',
+	'Error: API responded missing notes!',
 	"Error",
 	'You must supply api_token, team_token, the file and notes (missing notes)',
 	'icon.png',
@@ -97,7 +101,7 @@ if ($result == "You must supply api_token, team_token, the file and notes (missi
 {
 	$w->result(
 	'',
-	'Fail',
+	'Error: API responded missing file!',
 	"Error",
 	'You must supply api_token, team_token, the file and notes (missing file)',
 	'icon.png',
@@ -108,7 +112,7 @@ if ($result == "You must supply api_token, team_token, the file and notes (missi
 	$result_xml = new SimpleXMLElement($result);
 	$w->result(
 		'',
-		'Uploadsuccess',
+		$result_xml->install_url,
 		'Upload Success',
 		'Install URL '.$result_xml->install_url,
 		'icon.png',

@@ -1,9 +1,14 @@
 <?php
+/**
+* Pre Flight Distribution List
+* @author Dave Fisher <david.fisher@thevirtualforge.com>
+* @version 1.1
+*/
 require_once('workflows.php');
 $w = new Workflows('davefisher.tf');
 $stored_distlist = $w->get('default-distlist', 'preflight.plist');
 $q = $argv[1];
-// Testing appears but need to sort out strlen
+
 $w->result(
 	'',
 	$q,
@@ -31,5 +36,3 @@ $w->result(
 	);
 }
 echo $w->toxml();
-//echo $q;
-?>

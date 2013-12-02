@@ -23,4 +23,5 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
+
 echo $w->toxml();

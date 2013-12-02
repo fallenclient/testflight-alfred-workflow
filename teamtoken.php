@@ -7,6 +7,7 @@
 require_once('workflows.php');
 $w = new Workflows('davefisher.tf');
 $q = $argv[1];
+
 $w->result(
 	'',
 	$q,
@@ -15,4 +16,5 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
+
 echo $w->toxml();

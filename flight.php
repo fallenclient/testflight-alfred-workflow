@@ -87,28 +87,8 @@ $options = array(
 	);
 // REQUEST - HANDLE RESPONSE
 $result = $w->request('http://testflightapp.com/api/builds.xml', $options);
-if ($result == "You must supply api_token, team_token, the file and notes (missing notes)")
-{
-	$w->result(
-	'',
-	'Error: API responded missing notes!',
-	"Error",
-	'You must supply api_token, team_token, the file and notes (missing notes)',
-	'icon.png',
-	'yes'
-	);
-}else if ($result == "You must supply api_token, team_token, the file and notes (missing file)")
-{
-	$w->result(
-	'',
-	'Error: API responded missing file!',
-	"Error",
-	'You must supply api_token, team_token, the file and notes (missing file)',
-	'icon.png',
-	'yes'
-	);
-}else
-{
+
+try{
 	$result_xml = new SimpleXMLElement($result);
 	$w->result(
 		'',
@@ -118,6 +98,9 @@ if ($result == "You must supply api_token, team_token, the file and notes (missi
 		'icon.png',
 		'yes'
 		);
+}catch(Exception $e){
+	echo $result;
+	return;
 }
 echo $w->toxml();
 

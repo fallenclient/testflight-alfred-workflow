@@ -15,6 +15,7 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
+
 $w->result(
 	'',
 	"False",
@@ -23,4 +24,5 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
+
 echo $w->toxml();

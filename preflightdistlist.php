@@ -17,6 +17,7 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
+
 $w->result(
 	'',
 	"0",
@@ -25,7 +26,9 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
-if(strLen($stored_distlist) > 0 and $stored_distlist != "0"){
+
+if (strLen($stored_distlist) > 0 and $stored_distlist != "0")
+{
 $w->result(
 	'',
 	$stored_note,
@@ -35,4 +38,5 @@ $w->result(
 	'yes'
 	);
 }
+
 echo $w->toxml();

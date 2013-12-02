@@ -16,7 +16,9 @@ $w->result(
 	'icon.png',
 	'yes'
 	);
-if(strLen($stored_note) > 0){
+
+if (strLen($stored_note) > 0)
+{
 $w->result(
 	'',
 	$stored_note,
@@ -26,4 +28,5 @@ $w->result(
 	'yes'
 	);
 }
+
 echo $w->toxml();

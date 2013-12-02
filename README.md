@@ -7,7 +7,7 @@ A workflow for uploading builds to TestFlight from Alfred.
 
 Getting Started
 ===============
-Get started by adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken. With your ipa file and dSym zip file (optional) selected use the hotkey CTRL+SHIFT+B to start the workflow.
+Get started by adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken. With your ipa file and dSym zip file (optional) selected use the hotkey CTRL+SHIFT+B to start the workflow or as an alternative select Test Flight as the file action in the Alfred file browser.
 
 The workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload once return is hit will upload your file(s) in the background and will notify you on success or failure. A successfull upload will put the build link on your clipboard to paste.
 
@@ -21,6 +21,9 @@ jdfwarrior - Awesome PHP Workflow For Alfred - http://dferg.us/
 
 Change Log
 ----------
+Version 1.2
+* Workflow can now be triggered by Alfred File Action
+
 Version 1.1
 * Added Copy to Clipboard
 * Hitting return on tfupload continues execution

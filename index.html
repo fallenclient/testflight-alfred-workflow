@@ -33,10 +33,15 @@
       <section id="main_content" class="inner">
         <img src="images/all-options.jpg"/>
         <h3>Getting Started</h3>
-<p>Get started by adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken.
-With your ipa file and dSym zip file (optional) selected use the hotkey CTRL+SHIFT+B to start the workflow or navigate to your ipa using Alfreds file browser and selecting the TestFlight file action.</p>
+<p>This workflow can be triggered by hotkey keyboard shortcut with the ipa/dSym zip selected in a Finder window or by navigating to a ipa (with or without dSym zip) via the Alfred file browser.</p>
 
-<p>The workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload once return is hit will upload your file(s) in the background and will notify you on success or failure. A successfull upload will put the build link on your clipboard to paste.</p>
+<p>On a new install you need to set the hotkey to a key combination you want to use. You can do this by installing the workflow, going to Alfred preferences, Workflows, select TestFlight v1.2 from the left hand bar and double clicking the first item on the left "Hotkey". In the popup click the Hotkey: box and press the keys on the keyboard you would like to use.</p>
+
+<img src="images/hotkey-set.jpg"/>
+
+<p>The next step is adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken.</p>
+
+<p>When triggered the workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload once return is hit will upload your file(s) in the background and will notify you on success or failure. A successfull upload will put the build link on your clipboard to paste.</p>
 
 <h3>Notes</h3>
 <p class="notes">Once you have been through the workflow once using the keyword tfupload will start a new upload with previously entered options and the previously selected files.

@@ -1,4 +1,4 @@
-testflight-alfred-workflow
+Testflight Alfred Workflow
 ==========================
 
 A workflow for uploading builds to TestFlight from Alfred.
@@ -7,9 +7,11 @@ A workflow for uploading builds to TestFlight from Alfred.
 
 Getting Started
 ===============
-Get started by adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken. With your ipa file and dSym zip file (optional) selected use the hotkey CTRL+SHIFT+B to start the workflow or navigate to your ipa using Alfreds file browser and selecting the TestFlight file action.
+This workflow can be triggered by hotkey keyboard shortcut with the ipa/dSym zip selected in a Finder window or by navigating to a ipa (with or without dSym zip) via the Alfred file browser. 
 
-The workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload once return is hit will upload your file(s) in the background and will notify you on success or failure. A successfull upload will put the build link on your clipboard to paste.
+On a new install you need to set the hotkey to a key combination you want to use. You can do this by installing the workflow, going to Alfred preferences, Workflows, select TestFlight v1.2 from the left hand bar and double clicking the first item on the left "Hotkey". In the popup click the Hotkey: box and press the keys on the keyboard you would like to use. The next step is adding your API Token and Team Token to the workflow using keywords tfapitoken and tfteamtoken.
+
+When triggered the workflow will take you through adding notes, distribution list (optional), notify users of build (optional, defaults to false) and replace build of the same name (optional, defaults to false) in that order. Final step Test Flight Upload once return is hit will upload your file(s) in the background and will notify you on success or failure. A successfull upload will put the build link on your clipboard to paste.
 
 Notes
 =====
